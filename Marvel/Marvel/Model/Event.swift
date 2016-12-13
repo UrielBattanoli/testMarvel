@@ -14,7 +14,7 @@ class Event: NSObject {
     var title: String?
     var descript: String?
     var resourceUrl: String?
-    var urls: [String]?
+    var urls: [String] = []
     var modified: Date?
     var start: Date?
     var end: Date?
@@ -38,8 +38,10 @@ class Event: NSObject {
             self.resourceUrl = resourceUrl
         }
         
-        if let urls = data["urls"] as? [String] {
-            self.urls = urls
+        if let urls = data["urls"] as? [[String : AnyObject]] {
+            for url in urls {
+                self.urls.append(url["url"] as! String)
+            }
         }
         
         if let modified = data["modified"] as? Date {
@@ -54,8 +56,8 @@ class Event: NSObject {
             self.end = end
         }
         
-        if let thumbnail = data["thumbnail"] as? String {
-            self.thumbnail = thumbnail
+        if let image = data["thumbnail"]!["path"] as? String, let extens = data["thumbnail"]!["extension"] as? String {
+            self.thumbnail = "\(image).\(extens)"
         }
     }
 }

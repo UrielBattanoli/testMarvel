@@ -48,8 +48,8 @@ class Storie: NSObject {
             self.modified = modified
         }
         
-        if let thumbnail = data["thumbnail"] as? String {
-            self.thumbnail = thumbnail
+        if let image = data["thumbnail"]!["path"] as? String, let extens = data["thumbnail"]!["extension"] as? String {
+            self.thumbnail = "\(image).\(extens)"
         }
     }
 }

@@ -14,7 +14,7 @@ class Serie: NSObject {
     var title: String?
     var descript: String?
     var resourceUrl: String?
-    var urls: [String]?
+    var urls: [String] = []
     var startYear: Int?
     var endYear: Int?
     var rating: String?
@@ -43,8 +43,10 @@ class Serie: NSObject {
             self.resourceUrl = resourceUrl
         }
         
-        if let urls = data["urls"] as? [String] {
-            self.urls = urls
+        if let urls = data["urls"] as? [[String : AnyObject]] {
+            for url in urls {
+                self.urls.append(url["url"] as! String)
+            }
         }
         
         if let startYear = data["startYear"] as? Int {
@@ -63,8 +65,8 @@ class Serie: NSObject {
             self.modified = modified
         }
         
-        if let thumbnail = data["thumbnail"] as? String {
-            self.thumbnail = thumbnail
+        if let image = data["thumbnail"]!["path"] as? String, let extens = data["thumbnail"]!["extension"] as? String {
+            self.thumbnail = "\(image).\(extens)"
         }
     }
 }

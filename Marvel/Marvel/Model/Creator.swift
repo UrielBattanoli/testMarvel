@@ -18,7 +18,7 @@ class Creator: NSObject {
     var fullName: String?
     var modified: Date?
     var resourceUrl: String?
-    var urls: [String]?
+    var urls: [String] = []
     var thumbnail: String?
     var series: [Serie] = []
     var stories: [Storie] = []
@@ -58,12 +58,14 @@ class Creator: NSObject {
             self.resourceUrl = resourceUrl
         }
         
-        if let urls = data["urls"] as? [String] {
-            self.urls = urls
+        if let urls = data["urls"] as? [[String : AnyObject]] {
+            for url in urls {
+                self.urls.append(url["url"] as! String)
+            }
         }
         
-        if let thumbnail = data["thumbnail"] as? String {
-            self.thumbnail = thumbnail
+        if let image = data["thumbnail"]!["path"] as? String, let extens = data["thumbnail"]!["extension"] as? String {
+            self.thumbnail = "\(image).\(extens)"
         }
     }
 }

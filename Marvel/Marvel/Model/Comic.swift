@@ -25,7 +25,7 @@ class Comic: NSObject {
     var format: String?
     var pageCount: Int?
     var resourceUrl: String?
-    var urls: [String]?
+    var urls: [String] = []
     var series: [Serie] = []
     var dates: [Date]?
     var prices: [Double]?
@@ -97,8 +97,10 @@ class Comic: NSObject {
             self.resourceUrl = resourceUrl
         }
         
-        if let urls = data["urls"] as? [String] {
-            self.urls = urls
+        if let urls = data["urls"] as? [[String : AnyObject]] {
+            for url in urls {
+                self.urls.append(url["url"] as! String)
+            }
         }
     }
 }

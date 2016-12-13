@@ -1,0 +1,8 @@
+platform :ios, '10.1'
+use_frameworks!
+
+target 'Marvel' do
+  pod 'SwiftHTTP'
+  pod 'Gloss'
+  pod 'Kingfisher'
+end

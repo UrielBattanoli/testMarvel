@@ -27,16 +27,43 @@ class Comic: NSObject {
     var resourceUrl: String?
     var urls: [String] = []
     var series: [Serie] = []
-    var dates: [Date]?
-    var prices: [Double]?
+    var dates: [Date] = []
+    var prices: [Double] = []
     var thumbnail: String?
-    var images: [String]?
+    var images: [String] = []
     var creators: [Creator] = []
     var characters: [Character] = []
     var stories: [Storie] = []
     var events: [Event] = []
     
     init(_ data: [String : AnyObject]) {
+        if let dates = data["dates"] as? [[String : AnyObject]] {
+            for date in dates {
+                if let dt = DateFormatter().stringToDate(date["date"] as! String) {
+                    self.dates.append(dt)
+                }
+            }
+        }
+        if let prices = data["prices"] as? [[String : AnyObject]] {
+            for price in prices {
+                if let prc = price["price"] as? Float {
+                    self.prices.append(Double(prc))
+                }
+            }
+        }
+        
+        if let image = data["thumbnail"]!["path"] as? String, let extens = data["thumbnail"]!["extension"] as? String {
+            self.thumbnail = "\(image).\(extens)"
+        }
+        
+        if let images = data["images"] as? [[String : AnyObject]] {
+            for image in images {
+                if let path = image["path"] as? String, let extens = image["extension"] as? String {
+                    self.images.append("\(path).\(extens)")
+                }
+            }
+        }
+        
         if let id = data["id"] as? Int {
             self.id = id
         }
@@ -102,5 +129,6 @@ class Comic: NSObject {
                 self.urls.append(url["url"] as! String)
             }
         }
+        
     }
 }

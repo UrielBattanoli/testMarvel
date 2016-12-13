@@ -87,4 +87,22 @@ class CharacterListViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 194
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let character = self.characterList[self.selectedCharacter]
+        switch segue.identifier! {
+        case "goToCharacterComics":
+            let vcComic = segue.destination as! ComicListViewController
+            vcComic.character = character
+//        case "goToCharacterEvents":
+//            
+//        case "goToCharacterSeries":
+//            
+//        case "goToCharacterStories":
+            
+        default:
+            break
+        }
+    }
 }

@@ -56,33 +56,15 @@ class ConnectionManager: NSObject {
         }
     }
     
-    func getComicList(_ callback: ([Character])->()) {
-        self.requestWithGetMethod(path: "comics") { (json, error) in
-            print(json!)
-        }
-    }
-    
-    func getCreatorList(_ callback: ([Character])->()) {
-        self.requestWithGetMethod(path: "creators") { (json, error) in
-            print(json!)
-        }
-    }
-    
-    func getEventList(_ callback: ([Character])->()) {
-        self.requestWithGetMethod(path: "events") { (json, error) in
-            print(json!)
-        }
-    }
-    
-    func getSeriesList(_ callback: ([Character])->()) {
-        self.requestWithGetMethod(path: "series") { (json, error) in
-            print(json!)
-        }
-    }
-    
-    func getStoriesList(_ callback: ([Character])->()) {
-        self.requestWithGetMethod(path: "stories") { (json, error) in
-            print(json!)
+    func getComicListFromCharacter(_ characterId: Int, _ callback: @escaping ([Comic])->()) {
+        self.requestWithGetMethod(path: "characters/\(characterId)/comics") { (jsons, error) in
+            if let array = (jsons!["data"] as? [String : AnyObject])!["results"] as? [[String : AnyObject]] {
+                var comics:[Comic] = []
+                for json in array {
+                    comics.append(Comic(json))
+                }
+                callback(comics)
+            }
         }
     }
 }

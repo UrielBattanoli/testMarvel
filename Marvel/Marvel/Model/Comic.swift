@@ -61,8 +61,8 @@ class Comic: NSObject {
             self.descript = descript
         }
         
-        if let modified = data["modified"] as? Date {
-            self.modified = modified
+        if let modified = data["modified"] as? String {
+            self.modified = DateFormatter().stringToDate(modified)
         }
         
         if let isbn = data["isbn"] as? String {

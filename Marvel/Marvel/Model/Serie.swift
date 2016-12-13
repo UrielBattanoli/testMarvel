@@ -61,8 +61,8 @@ class Serie: NSObject {
             self.rating = rating
         }
         
-        if let modified = data["modified"] as? Date {
-            self.modified = modified
+        if let modified = data["modified"] as? String {
+            self.modified = DateFormatter().stringToDate(modified)
         }
         
         if let image = data["thumbnail"]!["path"] as? String, let extens = data["thumbnail"]!["extension"] as? String {

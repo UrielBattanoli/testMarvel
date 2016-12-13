@@ -44,16 +44,16 @@ class Event: NSObject {
             }
         }
         
-        if let modified = data["modified"] as? Date {
-            self.modified = modified
+        if let modified = data["modified"] as? String {
+            self.modified = DateFormatter().stringToDate(modified)
         }
         
-        if let start = data["start"] as? Date {
-            self.start = start
+        if let start = data["start"] as? String {
+            self.start = DateFormatter().stringToDate(start)
         }
         
-        if let end = data["end"] as? Date {
-            self.end = end
+        if let end = data["end"] as? String {
+            self.end = DateFormatter().stringToDate(end)
         }
         
         if let image = data["thumbnail"]!["path"] as? String, let extens = data["thumbnail"]!["extension"] as? String {

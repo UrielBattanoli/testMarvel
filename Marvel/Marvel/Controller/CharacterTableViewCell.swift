@@ -11,16 +11,29 @@ import UIKit
 class CharacterTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
+    @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var characterName: UILabel!
+    
+    // OpenCell
+    @IBOutlet weak var characterDescription: UILabel!
+    @IBOutlet weak var comicsButton: UIButton!
+    @IBOutlet weak var storiesButton: UIButton!
+    @IBOutlet weak var eventsButton: UIButton!
+    @IBOutlet weak var seriesButton: UIButton!
     
     //MARK: - Variables
     var character: Character! {
         didSet {
-            if let pathImage = self.character.thumbnail{
+            if let pathImage = self.character.thumbnail, self.characterImageView != nil{
                 self.characterImageView.loadImage(pathImage)
             }
-            self.characterName.text = self.character.name
+            if let name = self.character.name, self.characterName != nil {
+                self.characterName.text = name
+            }
+            if let description = self.character.descript, self.characterDescription != nil {
+                self.characterDescription.text = description
+            }
         }
     }
     

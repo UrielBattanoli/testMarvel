@@ -20,15 +20,16 @@ class CharacterListViewController: UIViewController, UITableViewDataSource, UITa
             self.tableView.reloadData()
         }
     }
+    var selectedCharacter = -1
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableView.tableFooterView = UIView()
         self.loadCharacters()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,19 +47,37 @@ class CharacterListViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     // MARK: - TableView data source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.characterList.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.selectedCharacter == section ? 2 : 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as! CharacterTableViewCell
-        cell.character = self.characterList[indexPath.row]
+        var cell: CharacterTableViewCell!
+        if indexPath.row == 0 {
+            cell = tableView.dequeueReusableCell(withIdentifier: "characterCell") as! CharacterTableViewCell
+            cell.separatorView.isHidden = indexPath.section == 0 ? true : false
+        }
+        else{
+            cell = tableView.dequeueReusableCell(withIdentifier: "openCharacterCell") as! CharacterTableViewCell
+        }
+        cell.character = self.characterList[indexPath.section]
         return cell
     }
     
     // MARK: - TableView delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: false)
+        if indexPath.row == 0 {
+            let indexSet: IndexSet = self.selectedCharacter == -1 ? IndexSet(integer: indexPath.section) : IndexSet(arrayLiteral: self.selectedCharacter, indexPath.section)
+            
+            self.selectedCharacter = self.selectedCharacter == indexPath.section ? -1 : indexPath.section
+            
+            tableView.reloadSections(indexSet, with: .automatic)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

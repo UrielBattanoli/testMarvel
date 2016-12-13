@@ -18,6 +18,7 @@
 		A4B46C4A1E005E5A00CD2FB5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C491E005E5A00CD2FB5 /* UIImageExtension.swift */; };
 		A4B46C4C1E006A8B00CD2FB5 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C4B1E006A8B00CD2FB5 /* CharacterListViewController.swift */; };
 		A4B46C4E1E006C4900CD2FB5 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C4D1E006C4900CD2FB5 /* CharacterTableViewCell.swift */; };
+		A4B46C501E007A1F00CD2FB5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C4F1E007A1F00CD2FB5 /* DateExtension.swift */; };
 		A4EEA5421E0017C900EAF677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EEA5411E0017C900EAF677 /* AppDelegate.swift */; };
 		A4EEA5471E0017C900EAF677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EEA5451E0017C900EAF677 /* Main.storyboard */; };
 		A4EEA5491E0017C900EAF677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EEA5481E0017C900EAF677 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		A4B46C491E005E5A00CD2FB5 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = Helpers/UIImageExtension.swift; sourceTree = "<group>"; };
 		A4B46C4B1E006A8B00CD2FB5 /* CharacterListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterListViewController.swift; path = Controller/CharacterListViewController.swift; sourceTree = "<group>"; };
 		A4B46C4D1E006C4900CD2FB5 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterTableViewCell.swift; path = Controller/CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		A4B46C4F1E007A1F00CD2FB5 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Helpers/DateExtension.swift; sourceTree = "<group>"; };
 		A4EEA53E1E0017C900EAF677 /* Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EEA5411E0017C900EAF677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EEA5461E0017C900EAF677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				A4B46C491E005E5A00CD2FB5 /* UIImageExtension.swift */,
+				A4B46C4F1E007A1F00CD2FB5 /* DateExtension.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B46C4C1E006A8B00CD2FB5 /* CharacterListViewController.swift in Sources */,
+				A4B46C501E007A1F00CD2FB5 /* DateExtension.swift in Sources */,
 				A4EEA5421E0017C900EAF677 /* AppDelegate.swift in Sources */,
 				A4B46C3E1E00324800CD2FB5 /* Creator.swift in Sources */,
 				A4B46C4A1E005E5A00CD2FB5 /* UIImageExtension.swift in Sources */,

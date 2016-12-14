@@ -91,4 +91,16 @@ class ConnectionManager: NSObject {
             }
         }
     }
+    
+    func getSerieListFromCharacter(_ characterId: Int, _ callback: @escaping ([Serie])->()) {
+        self.requestWithGetMethod(path: "characters/\(characterId)/series") { (jsons, error) in
+            if let array = (jsons!["data"] as? [String : AnyObject])!["results"] as? [[String : AnyObject]] {
+                var series:[Serie] = []
+                for json in array {
+                    series.append(Serie(json))
+                }
+                callback(series)
+            }
+        }
+    }
 }

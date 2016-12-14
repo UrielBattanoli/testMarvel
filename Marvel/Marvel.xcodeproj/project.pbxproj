@@ -11,6 +11,8 @@
 		A4555E841E00C982005B5456 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E831E00C982005B5456 /* EventTableViewCell.swift */; };
 		A4555E861E00C997005B5456 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E851E00C997005B5456 /* EventListViewController.swift */; };
 		A4555E881E00D46F005B5456 /* Designables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E871E00D46F005B5456 /* Designables.swift */; };
+		A4555E8A1E00E287005B5456 /* SerieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E891E00E287005B5456 /* SerieListViewController.swift */; };
+		A4555E8C1E00E2A4005B5456 /* SerieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E8B1E00E2A4005B5456 /* SerieTableViewCell.swift */; };
 		A4B46C3A1E002DE500CD2FB5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C391E002DE500CD2FB5 /* Character.swift */; };
 		A4B46C3C1E00322B00CD2FB5 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C3B1E00322B00CD2FB5 /* Comic.swift */; };
 		A4B46C3E1E00324800CD2FB5 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C3D1E00324800CD2FB5 /* Creator.swift */; };
@@ -56,6 +58,8 @@
 		A4555E831E00C982005B5456 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewCell.swift; path = Controller/EventTableViewCell.swift; sourceTree = "<group>"; };
 		A4555E851E00C997005B5456 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListViewController.swift; path = Controller/EventListViewController.swift; sourceTree = "<group>"; };
 		A4555E871E00D46F005B5456 /* Designables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Designables.swift; path = Helpers/Designables.swift; sourceTree = "<group>"; };
+		A4555E891E00E287005B5456 /* SerieListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SerieListViewController.swift; path = Controller/SerieListViewController.swift; sourceTree = "<group>"; };
+		A4555E8B1E00E2A4005B5456 /* SerieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SerieTableViewCell.swift; path = Controller/SerieTableViewCell.swift; sourceTree = "<group>"; };
 		A4B46C391E002DE500CD2FB5 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Model/Character.swift; sourceTree = "<group>"; };
 		A4B46C3B1E00322B00CD2FB5 /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comic.swift; path = Model/Comic.swift; sourceTree = "<group>"; };
 		A4B46C3D1E00324800CD2FB5 /* Creator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Creator.swift; path = Model/Creator.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				A4B46C571E00C25B00CD2FB5 /* StoriesTableViewCell.swift */,
 				A4555E851E00C997005B5456 /* EventListViewController.swift */,
 				A4555E831E00C982005B5456 /* EventTableViewCell.swift */,
+				A4555E891E00E287005B5456 /* SerieListViewController.swift */,
+				A4555E8B1E00E2A4005B5456 /* SerieTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				A4B46C521E0090FC00CD2FB5 /* ComicListViewController.swift in Sources */,
 				A4B46C3E1E00324800CD2FB5 /* Creator.swift in Sources */,
 				A4B46C4A1E005E5A00CD2FB5 /* UIImageExtension.swift in Sources */,
+				A4555E8C1E00E2A4005B5456 /* SerieTableViewCell.swift in Sources */,
 				A4B46C3C1E00322B00CD2FB5 /* Comic.swift in Sources */,
 				A4B46C541E00AD9F00CD2FB5 /* ComicTableViewCell.swift in Sources */,
 				A4B46C471E0045C000CD2FB5 /* ConnectionManager.swift in Sources */,
@@ -445,6 +452,7 @@
 				A4B46C441E00329000CD2FB5 /* Storie.swift in Sources */,
 				A4B46C3A1E002DE500CD2FB5 /* Character.swift in Sources */,
 				A4B46C4E1E006C4900CD2FB5 /* CharacterTableViewCell.swift in Sources */,
+				A4555E8A1E00E287005B5456 /* SerieListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

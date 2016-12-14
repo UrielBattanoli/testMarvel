@@ -98,8 +98,9 @@ class CharacterListViewController: UIViewController, UITableViewDataSource, UITa
         case "goToCharacterEvents":
             let vcEvent = segue.destination as! EventListViewController
             vcEvent.character = character
-//        case "goToCharacterSeries":
-//            
+        case "goToCharacterSeries":
+            let vcSerie = segue.destination as! SerieListViewController
+            vcSerie.character = character
         case "goToCharacterStories":
             let vcStorie = segue.destination as! StoriesViewController
             vcStorie.character = character

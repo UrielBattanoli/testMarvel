@@ -99,8 +99,9 @@ class CharacterListViewController: UIViewController, UITableViewDataSource, UITa
 //            
 //        case "goToCharacterSeries":
 //            
-//        case "goToCharacterStories":
-            
+        case "goToCharacterStories":
+            let vcStorie = segue.destination as! StoriesViewController
+            vcStorie.character = character
         default:
             break
         }

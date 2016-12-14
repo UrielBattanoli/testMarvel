@@ -21,6 +21,8 @@
 		A4B46C501E007A1F00CD2FB5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C4F1E007A1F00CD2FB5 /* DateExtension.swift */; };
 		A4B46C521E0090FC00CD2FB5 /* ComicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C511E0090FC00CD2FB5 /* ComicListViewController.swift */; };
 		A4B46C541E00AD9F00CD2FB5 /* ComicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C531E00AD9F00CD2FB5 /* ComicTableViewCell.swift */; };
+		A4B46C561E00BBD800CD2FB5 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C551E00BBD800CD2FB5 /* StoriesViewController.swift */; };
+		A4B46C581E00C25B00CD2FB5 /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C571E00C25B00CD2FB5 /* StoriesTableViewCell.swift */; };
 		A4EEA5421E0017C900EAF677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EEA5411E0017C900EAF677 /* AppDelegate.swift */; };
 		A4EEA5471E0017C900EAF677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EEA5451E0017C900EAF677 /* Main.storyboard */; };
 		A4EEA5491E0017C900EAF677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EEA5481E0017C900EAF677 /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		A4B46C4F1E007A1F00CD2FB5 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Helpers/DateExtension.swift; sourceTree = "<group>"; };
 		A4B46C511E0090FC00CD2FB5 /* ComicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComicListViewController.swift; path = Controller/ComicListViewController.swift; sourceTree = "<group>"; };
 		A4B46C531E00AD9F00CD2FB5 /* ComicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComicTableViewCell.swift; path = Controller/ComicTableViewCell.swift; sourceTree = "<group>"; };
+		A4B46C551E00BBD800CD2FB5 /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoriesViewController.swift; path = Controller/StoriesViewController.swift; sourceTree = "<group>"; };
+		A4B46C571E00C25B00CD2FB5 /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoriesTableViewCell.swift; path = Controller/StoriesTableViewCell.swift; sourceTree = "<group>"; };
 		A4EEA53E1E0017C900EAF677 /* Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EEA5411E0017C900EAF677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EEA5461E0017C900EAF677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				A4B46C4D1E006C4900CD2FB5 /* CharacterTableViewCell.swift */,
 				A4B46C511E0090FC00CD2FB5 /* ComicListViewController.swift */,
 				A4B46C531E00AD9F00CD2FB5 /* ComicTableViewCell.swift */,
+				A4B46C551E00BBD800CD2FB5 /* StoriesViewController.swift */,
+				A4B46C571E00C25B00CD2FB5 /* StoriesTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -411,6 +417,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B46C561E00BBD800CD2FB5 /* StoriesViewController.swift in Sources */,
+				A4B46C581E00C25B00CD2FB5 /* StoriesTableViewCell.swift in Sources */,
 				A4B46C4C1E006A8B00CD2FB5 /* CharacterListViewController.swift in Sources */,
 				A4B46C501E007A1F00CD2FB5 /* DateExtension.swift in Sources */,
 				A4EEA5421E0017C900EAF677 /* AppDelegate.swift in Sources */,

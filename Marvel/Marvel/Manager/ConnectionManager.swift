@@ -67,4 +67,16 @@ class ConnectionManager: NSObject {
             }
         }
     }
+    
+    func getStorieListFromCharacter(_ characterId: Int, _ callback: @escaping ([Storie])->()) {
+        self.requestWithGetMethod(path: "characters/\(characterId)/stories") { (jsons, error) in
+            if let array = (jsons!["data"] as? [String : AnyObject])!["results"] as? [[String : AnyObject]] {
+                var stories:[Storie] = []
+                for json in array {
+                    stories.append(Storie(json))
+                }
+                callback(stories)
+            }
+        }
+    }
 }

@@ -79,4 +79,16 @@ class ConnectionManager: NSObject {
             }
         }
     }
+    
+    func getEventListFromCharacter(_ characterId: Int, _ callback: @escaping ([Event])->()) {
+        self.requestWithGetMethod(path: "characters/\(characterId)/events") { (jsons, error) in
+            if let array = (jsons!["data"] as? [String : AnyObject])!["results"] as? [[String : AnyObject]] {
+                var events:[Event] = []
+                for json in array {
+                    events.append(Event(json))
+                }
+                callback(events)
+            }
+        }
+    }
 }

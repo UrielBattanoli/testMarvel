@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		042A03CA825D4407A163AE71 /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE63975AF23B996D5CB8105D /* Pods_Marvel.framework */; };
+		A4555E841E00C982005B5456 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E831E00C982005B5456 /* EventTableViewCell.swift */; };
+		A4555E861E00C997005B5456 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E851E00C997005B5456 /* EventListViewController.swift */; };
+		A4555E881E00D46F005B5456 /* Designables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4555E871E00D46F005B5456 /* Designables.swift */; };
 		A4B46C3A1E002DE500CD2FB5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C391E002DE500CD2FB5 /* Character.swift */; };
 		A4B46C3C1E00322B00CD2FB5 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C3B1E00322B00CD2FB5 /* Comic.swift */; };
 		A4B46C3E1E00324800CD2FB5 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46C3D1E00324800CD2FB5 /* Creator.swift */; };
@@ -50,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		2AAB261AD7A1A6677AEFCA87 /* Pods-Marvel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marvel/Pods-Marvel.release.xcconfig"; sourceTree = "<group>"; };
+		A4555E831E00C982005B5456 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewCell.swift; path = Controller/EventTableViewCell.swift; sourceTree = "<group>"; };
+		A4555E851E00C997005B5456 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListViewController.swift; path = Controller/EventListViewController.swift; sourceTree = "<group>"; };
+		A4555E871E00D46F005B5456 /* Designables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Designables.swift; path = Helpers/Designables.swift; sourceTree = "<group>"; };
 		A4B46C391E002DE500CD2FB5 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Model/Character.swift; sourceTree = "<group>"; };
 		A4B46C3B1E00322B00CD2FB5 /* Comic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comic.swift; path = Model/Comic.swift; sourceTree = "<group>"; };
 		A4B46C3D1E00324800CD2FB5 /* Creator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Creator.swift; path = Model/Creator.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 			children = (
 				A4B46C491E005E5A00CD2FB5 /* UIImageExtension.swift */,
 				A4B46C4F1E007A1F00CD2FB5 /* DateExtension.swift */,
+				A4555E871E00D46F005B5456 /* Designables.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -210,6 +217,8 @@
 				A4B46C531E00AD9F00CD2FB5 /* ComicTableViewCell.swift */,
 				A4B46C551E00BBD800CD2FB5 /* StoriesViewController.swift */,
 				A4B46C571E00C25B00CD2FB5 /* StoriesTableViewCell.swift */,
+				A4555E851E00C997005B5456 /* EventListViewController.swift */,
+				A4555E831E00C982005B5456 /* EventTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -428,7 +437,10 @@
 				A4B46C3C1E00322B00CD2FB5 /* Comic.swift in Sources */,
 				A4B46C541E00AD9F00CD2FB5 /* ComicTableViewCell.swift in Sources */,
 				A4B46C471E0045C000CD2FB5 /* ConnectionManager.swift in Sources */,
+				A4555E841E00C982005B5456 /* EventTableViewCell.swift in Sources */,
 				A4B46C401E00326700CD2FB5 /* Event.swift in Sources */,
+				A4555E881E00D46F005B5456 /* Designables.swift in Sources */,
+				A4555E861E00C997005B5456 /* EventListViewController.swift in Sources */,
 				A4B46C421E00327F00CD2FB5 /* Serie.swift in Sources */,
 				A4B46C441E00329000CD2FB5 /* Storie.swift in Sources */,
 				A4B46C3A1E002DE500CD2FB5 /* Character.swift in Sources */,
